@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de inventarios | SAES Commerce</title>
+  <link rel="stylesheet" href="all.min.css"> <!-- Font Awesome local -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+       <div class="brand">
+        <div class="brand-logo-box">
+        <span class="brand-logo"><i class="fa-solid fa-box-open"></i></span></div>
+        <span class="brand-name">SAES<br>COMMERCE</span>
+      </div>
+
+      <nav class="menu">
+        <a href="#" class="menu-item"><i class="fa-solid fa-house"></i> Inicio</a>
+        <a href="#" class="menu-item"><i class="fa-solid fa-users"></i> Usuarios</a>
+        <a href="#" class="menu-item"><i class="fa-regular fa-user"></i> Clientes</a>
+        <a href="#" class="menu-item"><i class="fa-solid fa-box-open"></i> Productos</a>
+        <a href="#" class="menu-item active"><i class="fa-solid fa-warehouse"></i> Inventario</a>
+        <a href="#" class="menu-item"><i class="fa-solid fa-cart-shopping"></i> Pedidos</a>
+        <a href="#" class="menu-item"><i class="fa-solid fa-chart-column"></i> Reportes</a>
+      </nav>
+
+      <nav class="menu menu-bottom">
+        <a href="#" class="menu-item"><i class="fa-solid fa-gear"></i> Configuración</a>
+        <a href="#" class="menu-item"><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a>
+      </nav>
+    </aside>
+
+    <!-- Contenido -->
+    <div class="main">
+      <header class="topbar">
+        <button class="icon-btn" aria-label="Menú"><i class="fa-solid fa-bars"></i></button>
+        <div class="topbar-right">
+          <button class="icon-btn bell" aria-label="Notificaciones">
+            <i class="fa-solid fa-bell"></i><span class="badge"></span>
+          </button>
+          <span class="avatar"><i class="fa-solid fa-user"></i></span>
+          <span class="user-name">Administrador <i class="fa-solid fa-chevron-down"></i></span>
+        </div>
+      </header>
+
+      <main class="content">
+        <h1 class="page-title">Control de inventarios</h1>
+        <p class="breadcrumb"><a href="#">Inicio</a> / Buscar producto</p>
+
+        <!-- Stock -->
+        <section class="card">
+          <div class="search">
+            <input type="text" placeholder="Buscar producto...">
+            <button aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Código</th>
+                  <th>Producto</th>
+                  <th>Stock disponible</th>
+                  <th>Stock mínimo</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PROD-001</td><td>Alveolar 1*50</td><td>220</td><td>100</td>
+                  <td><span class="tag tag-ok">Óptimo</span></td>
+                </tr>
+                <tr>
+                  <td>PROD-002</td><td>Alveolar 1*50 bola grande</td><td>70</td><td>30</td>
+                  <td><span class="tag tag-ok">Óptimo</span></td>
+                </tr>
+                <tr>
+                  <td>PROD-003</td><td>Cartón corrugado 1*20</td><td>25</td><td>10</td>
+                  <td><span class="tag tag-critical">Crítico</span></td>
+                </tr>
+                <tr>
+                  <td>PROD-004</td><td>Strech</td><td>150</td><td>40</td>
+                  <td><span class="tag tag-low">Bajo</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Historial -->
+        <section class="card">
+          <h2 class="section-title">Historial de movimientos</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Producto</th>
+                  <th>Tipo</th>
+                  <th>Cantidad</th>
+                  <th>Referencia</th>
+                  <th>Usuario</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>PROD-001</td><td>Alveolar 1*50</td><td>Entrada</td><td>200</td><td>COMP-00045</td><td>Zumpack</td>
+                </tr>
+                <tr>
+                  <td>PROD-001</td><td>Alveolar 1*50 bola grande</td><td>Salida</td><td>-30</td><td>PED-00025</td><td>Daniela Mora</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
